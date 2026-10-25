@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Dimas &amp; Ayu — Undangan Pernikahan</title>
+
+  <link rel="stylesheet" href="aset/bootstrap/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="halaman-terkunci">
+<header id="bagian-sampul" class="tata-letak-foto-dan-teks text-white">
+  <div class="kolom-foto">
+    <img src="aset/cover.jpg" alt="Dimas dan Ayu berfoto di depan tirai merah marun">
+  </div>
+
+  <div class="kolom-teks text-center px-4 pb-5">
+    <img src="aset/logo-dimas-ayu.png" alt="Monogram D &amp; A" width="84" height="84" class="mx-auto mb-2">
+    <p class="teks-label-kecil mb-2">The Wedding of</p>
+    <h1 class="nama-pasangan">Dimas <span>&amp;</span> Ayu</h1>
+    <p class="tanggal-sampul mb-4">Minggu, 20 Desember 2026</p>
+    <p class="mb-0 small opacity-75">Kepada Yth. Bapak/Ibu/Saudara/i</p>
+    <p class="fs-4 fw-medium mb-0" id="nama-tamu-undangan">Tamu Undangan</p>
+    <p class="small opacity-75 mb-4">Di tempat</p>
+
+    <button type="button" id="tombol-buka-undangan" class="btn tombol-buka-undangan">
+      <i class="bi bi-envelope-open me-2"></i>Buka Undangan
+    </button>
+  </div>
+</header>
+
+<main>
+<section id="bagian-pembuka" class="py-5">
+  <div class="container py-4">
+    <div class="row justify-content-center">
+      <div class="col-12 col-md-10 col-lg-8 text-center">
+        <p class="teks-bismillah">بِسْمِ اللّٰهِ الرَّحْمٰنِ الرَّحِيْمِ</p>
+        <p class="mb-3">Assalamu’alaikum Warahmatullahi Wabarakatuh</p>
+        <p>Dengan memohon rahmat dan ridha Allah SWT, kami bermaksud mengundang Bapak/Ibu/Saudara/i untuk berkenan hadir serta memberikan doa restu pada hari pernikahan kami.</p>
+
+        <figure class="kutipan-ayat-alquran mt-5 mb-0">
+          <blockquote class="mb-3">
+            <p class="mb-0"><q>Dan di antara tanda-tanda kekuasaan-Nya ialah Dia menciptakan pasangan-pasangan untukmu dari jenismu sendiri, agar kamu merasa tenteram kepadanya, dan Dia menjadikan di antaramu rasa kasih dan sayang.</q></p>
+          </blockquote>
+          <figcaption class="teks-label-kecil"><cite>QS. Ar-Rum: 21</cite></figcaption>
+        </figure>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="bagian-mempelai" class="py-5 latar-krem">
+  <div class="container py-4">
+    <div class="text-center mb-5">
+      <p class="teks-label-kecil mb-2">Kedua Mempelai</p>
+      <h2 class="judul-bagian">Yang Berbahagia</h2>
+    </div>
+
+    <div class="row gx-lg-5 gy-5 justify-content-center">
+      <div class="col-10 col-md-5 col-lg-4">
+        <article class="text-center">
+          <figure class="mb-4">
+            <img src="aset/pria.jpg" class="figure-img img-fluid w-100 mb-0 foto-mempelai" alt="Dimas Raditya">
+          </figure>
+          <h3 class="nama-mempelai">Dimas Raditya, S.T.</h3>
+          <dl class="keterangan-orang-tua">
+            <dt>Putra dari</dt>
+            <dd>Bapak Hartono &amp; Ibu Sulastri</dd>
+          </dl>
+          <a href="https://www.instagram.com/accounts/login/" target="_blank" class="tautan-instagram"><i class="bi bi-instagram me-1"></i>@dimasraditya</a>
+        </article>
+      </div>
+
+      <div class="col-10 col-md-5 col-lg-4">
+        <article class="text-center">
+          <figure class="mb-4">
+            <img src="aset/wanita.jpg" class="figure-img img-fluid w-100 mb-0 foto-mempelai" alt="Ayu Paramitha">
+          </figure>
+          <h3 class="nama-mempelai">Ayu Paramitha, S.Kom</h3>
+          <dl class="keterangan-orang-tua">
+            <dt>Putri dari</dt>
+            <dd>Bapak Suryadi &amp; Ibu Widyawati</dd>
+          </dl>
+          <a href="https://www.instagram.com/accounts/login/" target="_blank" class="tautan-instagram"><i class="bi bi-instagram me-1"></i>@ayuparamitha</a>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="bagian-hitung-mundur" class="latar-gradasi-marun text-white py-5" data-bs-theme="dark">
+  <div class="container text-center py-5">
+    <p class="teks-label-kecil mb-2">Save The Date</p>
+    <h2 class="judul-bagian mb-1">Minggu, 20 Desember 2026</h2>
+
+    <div class="row row-cols-4 justify-content-center mx-auto g-0 hitung-mundur">
+      <div class="col"><span class="angka-hitung-mundur" id="hitung-mundur-hari">00</span><span class="satuan-waktu">Hari</span></div>
+      <div class="col border-start border-light-subtle"><span class="angka-hitung-mundur" id="hitung-mundur-jam">00</span><span class="satuan-waktu">Jam</span></div>
+      <div class="col border-start border-light-subtle"><span class="angka-hitung-mundur" id="hitung-mundur-menit">00</span><span class="satuan-waktu">Menit</span></div>
+      <div class="col border-start border-light-subtle"><span class="angka-hitung-mundur" id="hitung-mundur-detik">00</span><span class="satuan-waktu">Detik</span></div>
+    </div>
+
+    <p id="pesan-hitung-mundur-selesai" class="mt-4 fst-italic d-none">Alhamdulillah, hari bahagia telah tiba.</p>
+    <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Pernikahan+Dimas+%26+Ayu&amp;dates=20261220T010000Z/20261220T070000Z&amp;details=Akad+nikah+pukul+08.00+WIB+dan+resepsi+pukul+11.00+WIB.&amp;location=Masjid+Al-Hikmah+dan+Gedung+Serbaguna+Melati%2C+Sukolilo%2C+Surabaya" target="_blank" class="btn tombol-garis-tepi mt-4"><i class="bi bi-calendar-plus me-2"></i>Simpan ke Kalender</a>
+  </div>
+</section>
+
+<section id="bagian-acara" class="py-5 latar-marun-gelap" data-bs-theme="dark">
+  <div class="container py-4">
+    <div class="text-center mb-5">
+      <p class="teks-label-kecil mb-2">Waktu &amp; Tempat</p>
+      <h2 class="judul-bagian">Acara Pernikahan</h2>
+    </div>
+
+    <div class="row g-4 justify-content-center align-items-start">
+      <div class="col-12 col-lg-4">
+        <div class="kalender-bulanan mx-auto">
+          <p class="nama-bulan-kalender" id="kalender-nama-bulan"></p>
+          <div class="kalender-kotak-tanggal" id="kalender-kotak-tanggal"></div>
+        </div>
+      </div>
+
+      <div class="col-12 col-lg-8">
+        <div class="row g-4">
+          <div class="col-12 col-md-6">
+            <article class="kartu-acara h-100">
+              <h3>Akad Nikah</h3>
+              <p class="tanggal-acara mb-1">Minggu, 20 Desember 2026</p>
+              <p class="jam-acara mb-1">Pukul 08.00–10.00 WIB</p>
+              <p class="mb-1 fw-medium">Masjid Al-Hikmah</p>
+              <address class="mb-3 opacity-75">Jl. Melati No. 18, Kecamatan Sukolilo, Surabaya, Jawa Timur</address>
+              <a class="btn tombol-garis-tepi btn-sm" href="https://www.google.com/maps/search/?api=1&query=Masjid+Al-Hikmah+Sukolilo+Surabaya" target="_blank"><i class="bi bi-geo-alt me-1"></i>Petunjuk Lokasi</a>
+            </article>
+          </div>
+          <div class="col-12 col-md-6">
+            <article class="kartu-acara h-100">
+              <h3>Resepsi</h3>
+              <p class="tanggal-acara mb-1">Minggu, 20 Desember 2026</p>
+              <p class="jam-acara mb-1">Pukul 11.00–14.00 WIB</p>
+              <p class="mb-1 fw-medium">Gedung Serbaguna Melati</p>
+              <address class="mb-3 opacity-75">Jl. Keputih Tegal No. 10, Kecamatan Sukolilo, Surabaya, Jawa Timur</address>
+              <a class="btn tombol-garis-tepi btn-sm" href="https://www.google.com/maps/search/?api=1&query=Gedung+Serbaguna+Melati+Sukolilo+Surabaya" target="_blank"><i class="bi bi-geo-alt me-1"></i>Petunjuk Lokasi</a>
+            </article>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row justify-content-center mt-5">
+      <div class="col-12 col-lg-8">
+        <div class="table-responsive">
+          <table class="table table-borderless align-middle mb-0 tabel-susunan-acara">
+            <caption class="caption-top text-center teks-label-kecil pb-3">Susunan Acara</caption>
+            <thead>
+              <tr><th>Acara</th><th>Pukul</th><th>Kegiatan</th></tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th rowspan="3">Akad Nikah</th>
+                <td>08.00</td><td>Keluarga dan tamu hadir</td>
+              </tr>
+              <tr><td>08.30</td><td>Pembacaan ayat suci Al-Qur’an</td></tr>
+              <tr><td>09.00</td><td>Prosesi ijab kabul</td></tr>
+              <tr>
+                <th rowspan="3">Resepsi</th>
+                <td>11.00</td><td>Tamu undangan hadir</td>
+              </tr>
+              <tr><td>12.00</td><td>Penyambutan kedua mempelai</td></tr>
+              <tr><td>13.00</td><td>Sesi foto bersama</td></tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="bagian-galeri" class="py-5 latar-krem">
+  <div class="container py-4">
+    <div class="text-center mb-5">
+      <h2 class="judul-bagian">Galeri</h2>
+    </div>
+
+    <div class="galeri-bingkai">
+      <div class="galeri-jalur-geser">
+        <div class="galeri-kumpulan-foto">
+          <img src="aset/galeri-1.jpg" class="foto-galeri" alt="Dimas dan Ayu dengan payung kertas">
+          <img src="aset/galeri-2.jpg" class="foto-galeri" alt="Dimas dan Ayu duduk di kursi kayu">
+          <img src="aset/galeri-3.jpg" class="foto-galeri" alt="Ayu bersandar pada Dimas">
+          <img src="aset/galeri-4.jpg" class="foto-galeri" alt="Ayu memegang payung kertas">
+          <img src="aset/galeri-5.jpg" class="foto-galeri" alt="Dimas berdiri di samping Ayu">
+        </div>
+        <div class="galeri-kumpulan-foto">
+          <img src="aset/galeri-1.jpg" class="foto-galeri" alt="">
+          <img src="aset/galeri-2.jpg" class="foto-galeri" alt="">
+          <img src="aset/galeri-3.jpg" class="foto-galeri" alt="">
+          <img src="aset/galeri-4.jpg" class="foto-galeri" alt="">
+          <img src="aset/galeri-5.jpg" class="foto-galeri" alt="">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div id="tampilan-foto-besar" class="tampilan-foto-besar"><img id="foto-diperbesar" src="" alt=""></div>
+
+<section id="bagian-kehadiran" class="py-5 latar-putih-gading">
+  <div class="container py-4">
+    <div class="text-center mb-5">
+      <p class="teks-label-kecil mb-2">R.S.V.P</p>
+      <h2 class="judul-bagian">Konfirmasi Kehadiran</h2>
+      <p class="mb-3">Mohon kesediaan Bapak/Ibu/Saudara/i mengisi formulir berikut sebagai konfirmasi kehadiran. Kami juga dengan senang hati menerima ucapan dan doa terbaik untuk perjalanan baru kami.</p>
+    </div>
+
+    <div class="row gx-lg-5 gy-5 justify-content-center">
+      <div class="col-12 col-lg-6">
+        <form id="formulir-kehadiran" class="kartu-formulir" novalidate>
+          <div class="mb-3">
+            <label for="isian-nama-tamu" class="form-label">Nama</label>
+            <input type="text" id="isian-nama-tamu" class="form-control" maxlength="40" placeholder="Masukkan nama lengkap">
+            <div class="invalid-feedback">Nama wajib diisi.</div>
+          </div>
+
+          <div class="mb-3">
+            <span class="form-label d-block">Kehadiran</span>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="status-kehadiran" id="pilihan-hadir" value="Hadir">
+              <label class="form-check-label" for="pilihan-hadir">Hadir</label>
+            </div>
+            <div class="form-check form-check-inline">
+              <input class="form-check-input" type="radio" name="status-kehadiran" id="pilihan-tidak-hadir" value="Tidak hadir">
+              <label class="form-check-label" for="pilihan-tidak-hadir">Tidak hadir</label>
+            </div>
+            <div class="invalid-feedback" id="pesan-kesalahan-kehadiran">Silakan pilih kehadiran.</div>
+          </div>
+
+          <div class="mb-3">
+            <label for="isian-jumlah-tamu" class="form-label">Jumlah tamu</label>
+            <select id="isian-jumlah-tamu" class="form-select">
+              <option value="1">1 orang</option>
+              <option value="2">2 orang</option>
+              <option value="3">3 orang</option>
+              <option value="4">4 orang</option>
+            </select>
+          </div>
+
+          <div class="mb-4">
+            <label for="isian-ucapan-doa" class="form-label">Ucapan &amp; Doa</label>
+            <textarea id="isian-ucapan-doa" class="form-control" rows="3" maxlength="250" placeholder="Tuliskan ucapan dan doa terbaik Anda"></textarea>
+            <div class="invalid-feedback">Ucapan wajib diisi.</div>
+          </div>
+
+          <button type="submit" class="btn tombol-isi-penuh w-100"><i class="bi bi-envelope-check me-2"></i>Kirim</button>
+        </form>
+      </div>
+
+      <div class="col-12 col-lg-6">
+        <h3 class="text-center mb-3">Ucapan &amp; Doa</h3>
+        <div id="daftar-ucapan-doa" class="overflow-auto">
+          <p id="pesan-belum-ada-ucapan" class="text-center text-body-secondary fst-italic">Belum ada ucapan. Jadilah yang pertama.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="bagian-tanda-kasih" class="py-5 latar-marun" data-bs-theme="dark">
+  <div class="container py-4">
+    <div class="text-center mb-5">
+      <h2 class="judul-bagian">Tanda Kasih</h2>
+      <p class="paragraf-lebar-terbatas mx-auto mb-0">Doa restu dan kehadiran Anda merupakan hadiah terindah bagi kami. Jika berkenan berbagi tanda kasih, informasi berikut tersedia sebagai pilihan.</p>
+    </div>
+
+    <div class="row g-4 justify-content-center">
+      <div class="col-12 col-md-6 col-lg-5">
+        <div class="kartu-rekening h-100 text-center">
+          <p class="teks-label-kecil mb-1"><i class="bi bi-bank me-2"></i>Bank BCA</p>
+          <p class="nomor-rekening">1234 5678 90</p>
+          <p class="small opacity-75 mb-3">a.n. Dimas Raditya</p>
+          <button type="button" class="btn tombol-garis-tepi btn-sm tombol-salin-nomor"><i class="bi bi-copy me-1"></i>Salin nomor</button>
+        </div>
+      </div>
+      <div class="col-12 col-md-6 col-lg-5">
+        <div class="kartu-rekening h-100 text-center">
+          <p class="teks-label-kecil mb-1"><i class="bi bi-wallet2 me-2"></i>GoPay</p>
+          <p class="nomor-rekening">0812 3456 7890</p>
+          <p class="small opacity-75 mb-3">a.n. Ayu Paramitha</p>
+          <button type="button" class="btn tombol-garis-tepi btn-sm tombol-salin-nomor"><i class="bi bi-copy me-1"></i>Salin nomor</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="bagian-penutup" class="tata-letak-foto-dan-teks text-white text-center" data-bs-theme="dark">
+  <div class="kolom-foto">
+    <img src="aset/penutup.jpg" alt="Dimas dan Ayu di studio berlatar abu-abu">
+  </div>
+  <div class="kolom-teks px-4 pb-5">
+    <p>Suatu kebahagiaan dan kehormatan bagi kami, apabila Bapak/Ibu/Saudara/i, berkenan hadir dan memberikan doa restu kepada kami.</p>
+    <p class="mb-5">Wassalamu’alaikum Warahmatullahi Wabarakatuh</p>
+    <p class="nama-pasangan nama-pasangan-penutup">Dimas <span>&amp;</span> Ayu</p>
+  </div>
+</section>
+
+<footer class="py-4 latar-marun-gelap"></footer>
+</main>
+
+<div class="kumpulan-tombol-melayang vstack gap-2" id="wadah-tombol-melayang">
+  <button type="button" id="tombol-kembali-ke-atas" class="tombol-melayang-bulat" title="Kembali ke atas"><i class="bi bi-arrow-up"></i></button>
+  <button type="button" id="tombol-musik" class="tombol-melayang-bulat" title="Musik"><i class="bi bi-volume-mute-fill"></i></button>
+  <button type="button" id="tombol-gulir-otomatis" class="tombol-melayang-bulat" title="Gulir otomatis"><i class="bi bi-chevron-double-down"></i></button>
+</div>
+
+<audio id="pemutar-musik" src="aset/lagu-pernikahan.mp3" loop preload="none"></audio>
+
+<script src="script.js"></script>
+</body>
+</html>

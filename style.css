@@ -1,0 +1,686 @@
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-weight: 500;
+  src: url("aset/font/cormorant-garamond-latin-500-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Cormorant Garamond";
+  font-weight: 500;
+  font-style: italic;
+  src: url("aset/font/cormorant-garamond-latin-500-italic.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Great Vibes";
+  src: url("aset/font/great-vibes-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Jost";
+  font-weight: 300;
+  src: url("aset/font/jost-latin-300-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Jost";
+  font-weight: 400;
+  src: url("aset/font/jost-latin-400-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Jost";
+  font-weight: 500;
+  src: url("aset/font/jost-latin-500-normal.woff2") format("woff2");
+}
+
+@font-face {
+  font-family: "Amiri";
+  src: url("aset/font/amiri-arabic-400-normal.woff2") format("woff2");
+}
+
+:root {
+  --warna-marun: #5b1a28;
+  --warna-marun-gelap: #3b0f19;
+  --warna-krem: #f4eee3;
+  --warna-gading: #fbf8f1;
+  --warna-emas: #b3904f;
+  --jenis-huruf-serif: "Cormorant Garamond", Georgia, serif;
+  --jenis-huruf-hias: "Great Vibes", cursive;
+  --bs-body-font-family: "Jost", Arial, sans-serif;
+  --bs-body-font-weight: 300;
+  --bs-body-color: #2c2124;
+  --bs-body-bg: var(--warna-gading);
+}
+
+[data-bs-theme="dark"] {
+  --bs-body-color: #f3e9e4;
+  --bs-body-bg: var(--warna-marun);
+  --bs-heading-color: #fbf4ef;
+  color: var(--bs-body-color);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+html.sedang-gulir-otomatis {
+  scroll-behavior: auto;
+}
+
+body.halaman-terkunci {
+  overflow: hidden;
+}
+
+h1, h2, h3 {
+  font-family: var(--jenis-huruf-serif);
+  font-weight: 500;
+}
+
+h2, h3:not(.nama-mempelai) {
+  text-transform: capitalize;
+}
+
+.latar-krem {
+  background: var(--warna-krem);
+}
+
+.latar-putih-gading {
+  background: var(--warna-gading);
+}
+
+.latar-marun {
+  background: var(--warna-marun);
+}
+
+.latar-marun-gelap {
+  background: var(--warna-marun-gelap);
+}
+
+.latar-gradasi-marun {
+  background: linear-gradient(135deg, var(--warna-marun-gelap), var(--warna-marun));
+}
+
+.judul-bagian {
+  font-size: 2.5rem;
+  line-height: 1.12;
+  color: var(--warna-marun);
+}
+
+.latar-marun .judul-bagian,
+.latar-marun-gelap .judul-bagian,
+.latar-gradasi-marun .judul-bagian {
+  color: #f0d9ac;
+}
+
+.teks-label-kecil {
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .3em;
+  text-transform: uppercase;
+  color: var(--warna-emas);
+}
+
+.paragraf-lebar-terbatas {
+  max-width: 32rem;
+}
+
+.teks-harapan-kehadiran {
+  max-width: 42rem;
+  margin-top: .15rem;
+  color: #d9bd86;
+  line-height: 1.55;
+}
+
+.nama-mempelai {
+  font-family: var(--jenis-huruf-hias);
+  font-size: 2.3rem;
+  color: var(--warna-marun);
+}
+
+.btn {
+  font-size: .78rem;
+  font-weight: 500;
+  letter-spacing: .16rem;
+  text-transform: uppercase;
+  border-radius: 0;
+  padding: .8rem 1.8rem;
+}
+
+.btn-sm {
+  padding: .55rem 1.2rem;
+  font-size: .72rem;
+}
+
+.tombol-isi-penuh {
+  background: var(--warna-marun);
+  color: #fff;
+}
+
+.tombol-isi-penuh:hover {
+  background: var(--warna-marun-gelap);
+  color: #fff;
+}
+
+.tombol-garis-tepi {
+  color: inherit;
+  border: 1px solid currentColor;
+}
+
+.tombol-garis-tepi:hover {
+  background: #f3e9e4;
+  color: var(--warna-marun);
+}
+
+.tombol-buka-undangan {
+  background: #f3e9e4;
+  color: var(--warna-marun);
+}
+
+.tata-letak-foto-dan-teks {
+  background: var(--warna-marun-gelap);
+}
+
+.kolom-foto {
+  position: relative;
+}
+
+.kolom-foto img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.kolom-foto::after {
+  content: "";
+  position: absolute;
+  inset: auto 0 0;
+  height: 55%;
+  background: linear-gradient(transparent, var(--warna-marun-gelap));
+}
+
+.kolom-teks {
+  position: relative;
+  z-index: 1;
+  margin-top: -9rem;
+}
+
+#bagian-sampul {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  overflow-y: auto;
+  transition: transform 1s ease;
+}
+
+#bagian-sampul.sampul-terbuka {
+  transform: translateY(-100%);
+}
+
+.nama-pasangan {
+  font-family: var(--jenis-huruf-hias);
+  font-size: clamp(3.4rem, 15vw, 4.6rem);
+  line-height: 1;
+}
+
+.nama-pasangan span {
+  font-size: .6em;
+  color: #d9bd86;
+}
+
+.tanggal-sampul {
+  letter-spacing: .22em;
+  text-transform: uppercase;
+  font-size: .8rem;
+}
+
+.teks-bismillah {
+  font-family: "Amiri", serif;
+  font-size: 1.9rem;
+  color: var(--warna-emas);
+}
+
+.kutipan-ayat-alquran {
+  padding: 2rem 0;
+  border-top: 1px solid var(--warna-emas);
+  border-bottom: 1px solid var(--warna-emas);
+}
+
+.kutipan-ayat-alquran blockquote p {
+  font-family: var(--jenis-huruf-serif);
+  font-style: italic;
+  font-size: 1.2rem;
+}
+
+.kutipan-ayat-alquran q {
+  quotes: none;
+}
+
+.kutipan-ayat-alquran cite {
+  font-style: normal;
+}
+
+.foto-mempelai {
+  outline: 1px solid var(--warna-emas);
+  outline-offset: 8px;
+}
+
+.keterangan-orang-tua dt {
+  font-weight: 300;
+  font-size: .85rem;
+}
+
+.keterangan-orang-tua dd {
+  margin: 0;
+  font-weight: 500;
+}
+
+.tautan-instagram {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: .25rem;
+  margin-top: .35rem;
+  padding: .65rem 1.1rem;
+  border: 1px solid var(--warna-marun);
+  border-radius: 999px;
+  background: var(--warna-marun);
+  color: #fff7f1;
+  text-decoration: none;
+  font-size: .9rem;
+  box-shadow: 0 4px 12px rgba(70, 20, 36, .15);
+  transition: background .25s ease, color .25s ease, transform .25s ease, box-shadow .25s ease;
+}
+
+.tautan-instagram:hover {
+  background: #f3e9e4;
+  color: var(--warna-marun);
+  transform: translateY(-2px);
+  box-shadow: 0 7px 18px rgba(70, 20, 36, .2);
+}
+
+.hitung-mundur {
+  max-width: 30rem;
+}
+
+.hitung-mundur .angka-hitung-mundur {
+  display: block;
+  font-family: var(--jenis-huruf-serif);
+  font-size: 2.6rem;
+  line-height: 1.1;
+}
+
+.hitung-mundur .satuan-waktu {
+  display: block;
+  font-size: .68rem;
+  letter-spacing: .24em;
+  text-transform: uppercase;
+  opacity: .75;
+}
+
+.kalender-bulanan {
+  max-width: 22rem;
+  padding: 1.3rem 1.2rem;
+  border: 1px solid var(--warna-emas);
+  text-align: center;
+}
+
+.kalender-bulanan .nama-bulan-kalender {
+  font-family: var(--jenis-huruf-serif);
+  font-size: 1.4rem;
+  letter-spacing: .08em;
+}
+
+.kalender-kotak-tanggal {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 2px;
+  font-size: .82rem;
+}
+
+.kalender-kotak-tanggal span {
+  padding: .35rem 0;
+  border-radius: 50%;
+}
+
+.kalender-kotak-tanggal .tanggal-hari-pernikahan {
+  background: #f3e9e4;
+  color: var(--warna-marun);
+  font-weight: 500;
+}
+
+.kartu-acara,
+.kartu-rekening {
+  padding: 1.8rem 1.6rem;
+  border: 1px solid var(--warna-emas);
+}
+
+.kartu-acara h3 {
+  font-size: 2rem;
+}
+
+.kartu-acara .jam-acara {
+  font-family: var(--jenis-huruf-serif);
+  font-size: 1.5rem;
+  color: #e6cd9c;
+}
+
+.tabel-susunan-acara {
+  --bs-table-bg: transparent;
+  --bs-table-color: inherit;
+}
+
+.tabel-susunan-acara thead th {
+  font-size: .7rem;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: #d9bd86;
+}
+
+.tabel-susunan-acara tbody th {
+  font-family: var(--jenis-huruf-serif);
+  font-size: 1.3rem;
+  vertical-align: top;
+}
+
+.galeri-bingkai {
+  width: 100%;
+  overflow: hidden;
+  padding-bottom: .5rem;
+  mask-image: linear-gradient(to right, transparent, black 4%, black 96%, transparent);
+}
+
+.galeri-jalur-geser {
+  display: flex;
+  width: max-content;
+  animation: animasi-geser-galeri 32s linear infinite;
+}
+
+.galeri-bingkai:hover .galeri-jalur-geser {
+  animation-play-state: paused;
+}
+
+.galeri-kumpulan-foto {
+  display: flex;
+  gap: 1rem;
+  padding-right: 1rem;
+  flex-shrink: 0;
+}
+
+.foto-galeri {
+  flex: 0 0 clamp(210px, 27vw, 320px);
+  width: clamp(210px, 27vw, 320px);
+  height: clamp(260px, 34vw, 390px);
+  object-fit: cover;
+  border-radius: .65rem;
+  cursor: zoom-in;
+  background: var(--warna-krem);
+}
+
+@keyframes animasi-geser-galeri {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+.tampilan-foto-besar {
+  position: fixed;
+  inset: 0;
+  z-index: 3000;
+  background: rgba(28, 6, 12, .95);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+
+.tampilan-foto-besar.tampilan-foto-besar-terbuka {
+  display: flex;
+}
+
+.tampilan-foto-besar img {
+  max-width: 95vw;
+  max-height: 92vh;
+  object-fit: contain;
+}
+
+.kartu-formulir {
+  background: var(--warna-gading);
+  padding: 1.6rem;
+  border: 1px solid var(--warna-emas);
+}
+
+.form-label {
+  font-size: .72rem;
+  font-weight: 500;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--warna-marun);
+}
+
+.form-control,
+.form-select {
+  border-radius: 0;
+}
+
+.form-check-input {
+  border-color: #777;
+}
+
+.form-check-input:checked {
+  background-color: var(--warna-marun);
+  border-color: var(--warna-marun);
+}
+
+#daftar-ucapan-doa {
+  max-height: 30rem;
+}
+
+.kartu-ucapan-doa {
+  padding-left: 1rem;
+  border-left: 2px solid var(--warna-emas);
+  margin-bottom: 1rem;
+}
+
+.kartu-ucapan-doa strong {
+  font-family: var(--jenis-huruf-serif);
+  font-size: 1.25rem;
+  color: var(--warna-marun);
+}
+
+.kartu-ucapan-doa small {
+  display: block;
+  color: #857a7c;
+  font-size: .72rem;
+}
+
+.nomor-rekening {
+  font-family: var(--jenis-huruf-serif);
+  font-size: 1.9rem;
+  letter-spacing: .08em;
+}
+
+#bagian-penutup {
+  background: linear-gradient(135deg, #2b0c18 0%, #5a2034 55%, #38101f 100%);
+}
+
+#bagian-penutup .kolom-teks {
+  margin-top: -4.5rem;
+}
+
+#bagian-penutup .kolom-teks p {
+  color: #f6e9df;
+}
+
+.nama-pasangan-penutup {
+  margin-top: .8rem;
+  animation: animasi-kilau-nama 3.5s ease-in-out infinite alternate;
+}
+
+@keyframes animasi-kilau-nama {
+  from {
+    text-shadow: 0 2px 10px rgba(232, 199, 127, .18);
+  }
+  to {
+    text-shadow: 0 2px 24px rgba(240, 203, 123, .55);
+  }
+}
+
+.kumpulan-tombol-melayang {
+  position: fixed;
+  right: 14px;
+  bottom: 20px;
+  z-index: 1600;
+  display: none;
+}
+
+.kumpulan-tombol-melayang.tampil {
+  display: flex;
+}
+
+.tombol-melayang-bulat {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--warna-marun);
+  color: #f3e9e4;
+  border: 1px solid #f3e9e4;
+  font-size: 1.15rem;
+  box-shadow: 0 4px 14px rgba(40, 8, 16, .35);
+}
+
+.tombol-melayang-bulat.sedang-aktif {
+  background: #f3e9e4;
+  color: var(--warna-marun);
+  border-color: var(--warna-marun);
+}
+
+#tombol-kembali-ke-atas {
+  display: none;
+}
+
+#tombol-kembali-ke-atas.tampil {
+  display: block;
+}
+
+.animasi-tersembunyi {
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity .8s ease, transform .8s cubic-bezier(.2, .7, .2, 1);
+}
+
+.animasi-tersembunyi.animasi-tampil {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+#bagian-pembuka .teks-bismillah.animasi-tersembunyi {
+  transform: translateY(20px) scale(.94);
+}
+
+#bagian-pembuka .kutipan-ayat-alquran.animasi-tersembunyi {
+  transform: translateY(30px) scale(.97);
+}
+
+#bagian-pembuka .teks-bismillah.animasi-tampil,
+#bagian-pembuka .kutipan-ayat-alquran.animasi-tampil {
+  transform: translateY(0) scale(1);
+}
+
+main section img.animasi-tersembunyi {
+  transform: translateY(18px) scale(.94);
+  transition: opacity .9s ease, transform 1s cubic-bezier(.2, .7, .2, 1);
+}
+
+main section img.animasi-tersembunyi.animasi-tampil {
+  transform: translateY(0) scale(1);
+}
+
+@media (min-width: 992px) {
+  .judul-bagian {
+    font-size: 3rem;
+  }
+
+  .nama-mempelai {
+    font-size: 2.8rem;
+  }
+
+  .teks-bismillah {
+    font-size: 2.4rem;
+  }
+
+  .kutipan-ayat-alquran blockquote p {
+    font-size: 1.4rem;
+  }
+
+  .hitung-mundur {
+    max-width: 38rem;
+  }
+
+  .hitung-mundur .angka-hitung-mundur {
+    font-size: 3.6rem;
+  }
+
+  .kartu-acara h3 {
+    font-size: 2.3rem;
+  }
+
+  .tombol-melayang-bulat {
+    width: 48px;
+    height: 48px;
+  }
+
+  .kumpulan-tombol-melayang {
+    right: 24px;
+    bottom: 24px;
+  }
+
+  .tata-letak-foto-dan-teks {
+    display: flex;
+  }
+
+  .kolom-foto {
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .kolom-foto img {
+    width: auto;
+    max-width: 100%;
+    max-height: 100vh;
+    object-fit: contain;
+  }
+
+  .kolom-foto::after {
+    display: none;
+  }
+
+  .kolom-teks,
+  #bagian-penutup .kolom-teks {
+    width: 50%;
+    margin-top: 0;
+    padding: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  #bagian-sampul {
+    overflow: hidden;
+  }
+
+  .nama-pasangan {
+    font-size: 6.5rem;
+  }
+
+  #bagian-penutup .kolom-teks p:not(.nama-pasangan-penutup) {
+    max-width: 32rem;
+    font-size: 1.1rem;
+  }
+}
